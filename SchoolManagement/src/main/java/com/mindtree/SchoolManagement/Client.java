@@ -133,8 +133,11 @@ public class Client {
 		String name = sc.next();
 		System.out.println("Enter Student Age: ");
 		int str = sc.nextInt();
-		classroom = createClassRoom();
-		Student student = new Student(sid, name,str,classroom);
+		System.out.println("Enter the classroom ID:");
+		int schoolid=sc.nextInt();
+		
+		
+		Student student = new Student(sid, name,str,schoolid);
 
 		return student;
 		

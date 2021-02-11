@@ -31,12 +31,13 @@ public class SchoolManagementDAOImpl implements SchoolManagementDAO{
 			
 			con = connection.getConnection();
 			
-			String insertQuery = "Insert into Student values(?,?,?)";
+			String insertQuery = "Insert into Student values(?,?,?,?)";
 			ps = con.prepareStatement(insertQuery);
 
 			ps.setInt(1, student.getsid());
 			ps.setString(2, student.getName());
 			ps.setInt(3, student.getAge());
+			ps.setInt(4, student.getSchoolid());
 		
 
 			ps.executeUpdate();
@@ -93,7 +94,7 @@ public class SchoolManagementDAOImpl implements SchoolManagementDAO{
 		Connection con = null;
 		ResultSet rs = null;
 		Statement st = null;
-		String query = "select sid,Student.name,age,id,Classroom.name,str from Student inner join ClassRoom on Student.sid=Classroom.id where sid="+sid+"";
+		String query = "select sid,Student.name,age,schoolid,Classroom.name,str from Student inner join ClassRoom on Student.schoolid=Classroom.id where sid="+sid+"";
 
 		try 
 		{
@@ -116,7 +117,7 @@ public class SchoolManagementDAOImpl implements SchoolManagementDAO{
 				System.out.println("Name"+name);
 				System.out.println("Age"+age);
 
-				System.out.println("ID:"+id);
+				System.out.println("School ID:"+id);
 				System.out.println("Name"+cname);
 				System.out.println("Strength"+str);
 				

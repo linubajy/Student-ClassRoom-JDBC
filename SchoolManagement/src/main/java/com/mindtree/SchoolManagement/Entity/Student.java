@@ -5,6 +5,7 @@ public class Student {
 	private int sid;
 	private String name;
 	private int age;
+	private int schoolid;
 
 	private ClassRoom classroom;
 
@@ -12,15 +13,16 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public Student(int sid, String name, int age, ClassRoom classroom) {
+	
+	public Student(int sid, String name, int age, int schoolid) {
 		super();
 		this.sid = sid;
 		this.name = name;
 		this.age = age;
-		this.classroom = classroom;
+		this.setSchoolid(schoolid);
 	}
 
+	
 	public int getsid() {
 		return sid;
 	}
@@ -44,5 +46,16 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	public int getSchoolid() {
+		return schoolid;
+	}
+
+	public void setSchoolid(int schoolid) {
+		this.schoolid = schoolid;
+	}
+	
+	
+	
 
 }

@@ -6,10 +6,13 @@ public class ClassRoom
 	private int id;
 	private String name;
 	private int str;
+
+	
 	public ClassRoom() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public ClassRoom(int id, String name, int str) {
 		super();
 		this.id = id;
